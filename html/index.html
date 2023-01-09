@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#name</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <div class="hero_section">
+      <!-- message for pc user ,
+      that you can use this site only in phone -->
+      <div class="qr_message" id="qr_message">
+        <p class="qr_message_pragh">
+          Scan this QR to be able to use this website on your phone.
+          <input
+            type="button"
+            class="qr_message_btn"
+            id="close_qr"
+            onclick="fun_close_qr()"
+            value="x" />
+        </p>
+        <img src="/image/qr.png" alt="" title="Scan me" class="qr_code_img" />
+      </div>
+      <div class="not_found" id="not_found">
+        <div class="not_found_content">
+          <h1>Oops</h1>
+          <h2>Something Went Wrong.</h2>
+          <div class="">
+            <p class="not_found_pragh">Error 404 Page Not Found</p>
+            <input
+              type="button"
+              value=" i"
+              class="not_found_btn"
+              id="QR"
+              onclick="fun_open_qr()"
+              title="This page seems work only on phone" />
+          </div>
+        </div>
+        <img src="/image/404.png" alt="" class="not_found_bg" />
+      </div>
+      <div class="hero_section_top">
+        <img src="/image/top_img.jpg" class="astronaut" alt="" />
+      </div>
+      <div class="hero_section_bottom">
+        <div class="cricle_bg"></div>
+        <div class="bg"></div>
+        <div class="content">
+          <img src="/image/profil_image.jpg" alt="" class="person_img" />
+          <h1 class="person_name">Mohamed Rezgallah</h1>
+          <p class="person_work">developer</p>
+          <div class="icon">
+            <a href="" class="icon_link"><i class="bi bi-tiktok"></i></a>
+            <a href="" class="icon_link"><i class="bi bi-youtube"></i></a>
+            <a href="" class="icon_link"><i class="bi bi-twitter"></i></a>
+            <a href="" class="icon_link"><i class="bi bi-instagram"></i></a>
+          </div>
+          <div class="hero_more_btn">
+            <a href="#" class="hero_more_btn_link"
+              ><p class="hero_more_btn_text hero_more_btn_text_top">
+                My Portfolio
+              </p></a
+            >
+            <a href="" class="hero_more_btn_link"
+              ><p class="hero_more_btn_text">Some Quote</p></a
+            >
+            <a href="/html/about-me.html" class="hero_more_btn_link"
+              ><p class="hero_more_btn_text">About Me</p></a
+            >
+            <a href="" class="hero_more_btn_link"
+              ><p class="hero_more_btn_text hero_more_btn_text_bottom">
+                Contact Me
+              </p></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
