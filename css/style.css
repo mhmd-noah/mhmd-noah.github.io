@@ -1,0 +1,581 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1020px) {
+  .hero_section_top,
+  .hero_section_bottom,
+  .about_section {
+    display: none;
+  }
+  body {
+    background: rgb(0, 0, 29);
+  }
+  .qr_message {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    height: 455px;
+    width: 50%;
+    background: linear-gradient(
+      225deg,
+      rgba(0, 0, 29, 1) 4%,
+      rgba(20, 65, 120, 1) 50%,
+      rgba(1, 0, 66, 1) 82%
+    );
+    border-radius: 20px;
+    z-index: 500;
+  }
+  .qr_code_img {
+    margin: 45px 0 0;
+  }
+
+  .qr_message_pragh {
+    position: absolute;
+    left: 25px;
+    top: 40px;
+    width: 90%;
+  }
+  .qr_message_btn {
+    font-family: "roboto";
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+  }
+  .not_found {
+    z-index: 444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(
+      225deg,
+      rgba(0, 0, 29, 1) 4%,
+      rgba(20, 65, 120, 1) 50%,
+      rgba(1, 0, 66, 1) 82%
+    );
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0 0 8px 0;
+  }
+  h2,
+  p {
+    color: #ffffff;
+    z-index: 99;
+    font-family: "outfit";
+  }
+  .not_found_content {
+    z-index: 99;
+    margin-bottom: 470px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .not_found_pragh {
+    display: inline;
+    margin: 0 5px 0 0;
+  }
+  .not_found_content {
+    z-index: 1;
+    position: absolute;
+  }
+  .not_found_btn {
+    background: none;
+    font-style: italic;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    border: white 2px solid;
+    border-radius: 50%;
+    padding: 0 4px 0 0;
+    font-size: 12px;
+    font-weight: 500;
+    height: 20px;
+    width: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 4rem;
+    color: #ffffff;
+    z-index: 99;
+    font-family: "outfit";
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1020px) {
+  .not_found,
+  .qr_message {
+    display: none;
+  }
+  body {
+    background: #14181b;
+  }
+  .hero_section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero_section_top {
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+  }
+  .astronaut {
+    height: 30vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-bottom: 5px;
+  }
+  .hero_section_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    z-index: 10;
+  }
+  .cricle_bg {
+    background: #14181b;
+    width: 108%;
+    height: 18vh;
+    border-radius: 50%;
+    position: relative;
+    bottom: -4vh;
+  }
+  .bg {
+    background-color: #14181b;
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  .content {
+    z-index: 99;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+  .person_img {
+    z-index: 99;
+    border-radius: 50%;
+    width: 145px;
+    height: 145px;
+    border: white solid 3px;
+    position: relative;
+    bottom: 2.6vh;
+  }
+  .person_name {
+    letter-spacing: 1px;
+    text-align: center;
+    z-index: 99;
+    color: white;
+    margin: 5px 0 5px 0;
+    font-size: 55px;
+  }
+  .person_work {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 28px;
+    text-align: center;
+    z-index: 99;
+    color: white;
+    margin: 5px 0 25px 0;
+  }
+  .icon {
+    display: flex;
+    justify-content: space-evenly;
+    width: 350px;
+    align-items: center;
+    z-index: 99;
+  }
+  .icon_link {
+    color: rgb(255, 255, 255);
+  }
+  .bi {
+    font-size: 35px;
+  }
+  .hero_more_btn {
+    z-index: 99;
+    margin: 3.5vh 0 0;
+  }
+  .hero_more_btn_link {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 0.25em currentColor;
+  }
+  .hero_more_btn_text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: solid 5px white;
+    margin: 2.5vh 0;
+    width: 600px;
+    height: 90px;
+    font-size: 30px;
+    box-shadow: inset 0 0 0.5em 0 white, 0 0 0.5em 0 white;
+  }
+  .hero_more_btn_text_top {
+    margin-top: 0;
+  }
+  .hero_more_btn_text_bottom {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 767px) {
+  .not_found,
+  .qr_message {
+    display: none;
+  }
+  body {
+    background: #14181b;
+  }
+  .hero_section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero_section_top {
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+  }
+  .astronaut {
+    height: 30vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-bottom: 35px;
+  }
+  .hero_section_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    z-index: 10;
+  }
+  .cricle_bg {
+    background: #14181b;
+    width: 108%;
+    height: 15vh;
+    border-radius: 50%;
+  }
+  .bg {
+    background-color: #14181b;
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  .content {
+    z-index: 99;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+  .person_img {
+    z-index: 99;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    border: white solid 3px;
+    position: relative;
+    bottom: 3.9vh;
+  }
+  .person_name {
+    letter-spacing: 1px;
+    text-align: center;
+    z-index: 99;
+    color: white;
+    font-size: 28px;
+    margin-top: -5px;
+  }
+  .person_work {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    z-index: 99;
+    color: white;
+    margin: 5px 0 25px 0;
+  }
+  .icon {
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    align-items: center;
+    z-index: 99;
+  }
+  .icon_link {
+    color: rgb(255, 255, 255);
+  }
+  .bi {
+    font-size: 20px;
+  }
+  .hero_more_btn {
+    z-index: 99;
+    margin: 15px 0 0;
+  }
+  .hero_more_btn_link {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 0.25em currentColor;
+  }
+  .hero_more_btn_text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: solid 3px white;
+    margin: 18px 0;
+    width: 320px;
+    height: 50px;
+    box-shadow: inset 0 0 0.5em 0 white, 0 0 0.5em 0 white;
+  }
+  /* about */
+  .about_section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #14181b;
+  }
+  .about_section_top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 24px 20px;
+  }
+  .about_title {
+    font-family: "outfit", sans-serif;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: white;
+    text-shadow: 0 0 0.25em currentColor;
+    animation: text-flicker 3s linear infinite;
+  }
+  @keyframes text-flicker {
+    0% {
+      opacity: 0.1;
+    }
+
+    2% {
+      opacity: 1;
+    }
+
+    8% {
+      opacity: 0.1;
+    }
+
+    9% {
+      opacity: 1;
+    }
+
+    12% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    30% {
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 0.7;
+    }
+    72% {
+      opacity: 0.2;
+    }
+
+    77% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+  .about_section_top_link {
+    font-family: "outfit", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: white;
+    text-shadow: 0 0 0.25em currentColor;
+    animation: text-flicker 3s linear infinite;
+  }
+  .about_section_bottom {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .not_found,
+  .qr_message {
+    display: none;
+  }
+  body {
+    background: #14181b;
+  }
+  .hero_section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero_section_top {
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+  }
+  .astronaut {
+    height: 30vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-bottom: 35px;
+  }
+  .hero_section_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    z-index: 10;
+  }
+  .cricle_bg {
+    background: #14181b;
+    width: 108%;
+    height: 15vh;
+    border-radius: 50%;
+  }
+  .bg {
+    background-color: #14181b;
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  .content {
+    z-index: 99;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+  .person_img {
+    z-index: 99;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border: white solid 2px;
+    position: relative;
+    bottom: 3.9vh;
+  }
+  .person_name {
+    letter-spacing: 1px;
+    text-align: center;
+    z-index: 99;
+    color: white;
+    font-size: 22px;
+    margin-top: -5px;
+  }
+  .person_work {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    z-index: 99;
+    color: white;
+    margin: 5px 0 25px 0;
+  }
+  .icon {
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    align-items: center;
+    z-index: 99;
+  }
+  .icon_link {
+    color: rgb(255, 255, 255);
+  }
+  .bi {
+    font-size: 16px;
+  }
+  .hero_more_btn {
+    z-index: 99;
+    margin: 30px 0 0;
+  }
+  .hero_more_btn_link {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 0.25em currentColor;
+  }
+  .hero_more_btn_text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: solid 3px white;
+    margin: 18px 0;
+    width: 245px;
+    height: 43px;
+    font-size: 15px;
+    box-shadow: inset 0 0 0.5em 0 white, 0 0 0.5em 0 white;
+  }
+  .hero_more_btn_text_top {
+    margin-top: 0;
+  }
+  .hero_more_btn_text_bottom {
+    margin-bottom: 0;
+  }
+}
