@@ -370,20 +370,138 @@
     margin-bottom: 15vh;
     width: 320px;
   }
-  .about_section_bottom_line {
-    position: absolute;
-    bottom: 0;
+  .contact_section {
     width: 100%;
-    height: 6px;
-    background-color: #efebd8;
-    filter: blur(2px);
-    box-shadow: 0px -20px 50px rgb(239, 235, 216),
-      0px -20px 100px rgba(239, 235, 215, 0.9),
-      0px 2px 150px rgba(239, 235, 215, 0.75),
-      0px -20px 200px rgba(239, 235, 215, 0.65),
-      0px -20px 250px rgba(239, 235, 215, 0.6),
-      1px 20px 300px rgba(239, 228, 215, 0.55);
-    animation: text-flicker 8s linear infinite;
+    height: 100vh;
+    background-image: url(/image/contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: system-ui, "-apple-system", "Segoe UI", "Open Sans",
+      "Helvetica Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 66vh;
+    width: 100%;
+    position: relative;
+  }
+  .contant_title {
+    color: black;
+    font-weight: 500;
+    font-size: 5.5rem;
+    font-family: "outfit";
+    letter-spacing: 2.5px;
+    margin: 20px 0 50px;
+    position: absolute;
+    top: 0;
+  }
+  .last-name,
+  .E-mail {
+    margin: 12px 0 0;
+  }
+  .Message {
+    margin: 15px 0;
+  }
+  .name-box {
+    width: 85%;
+    position: relative;
+    height: 75px;
+    overflow: hidden;
+  }
+  .textarea-box {
+    width: 85%;
+    position: relative;
+    height: 25%;
+    overflow: hidden;
+  }
+  .name-box input,
+  .textarea-box textarea {
+    width: 100%;
+    height: 100%;
+    color: black;
+    padding-top: 20px;
+    border: none;
+    background: none;
+  }
+  .name-box label,
+  .textarea-box label {
+    font-family: system-ui, "-apple-system", "Segoe UI", "Open Sans",
+      "Helvetica Neue", sans-serif;
+    position: absolute;
+    font-weight: 400;
+    font-size: 1.85rem;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #000000;
+  }
+
+  .content-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+  .content-textarea {
+    position: absolute;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+  .name-box input:focus,
+  .textarea-box textarea:focus {
+    outline: none;
+  }
+  .name-box input:focus + .label-name .content-name,
+  .name-box input:valid + .label-name .content-name {
+    transform: translateY(-70%);
+    font-size: 14px;
+    left: 0px;
+  }
+  .textarea-box textarea:focus + .label-textarea .content-textarea,
+  .textarea-box textarea:valid + .label-textarea .content-textarea {
+    transform: translateY(-10%);
+    font-size: 14px;
+    left: 0px;
+  }
+  .btn-box {
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 78px;
+    width: 85vw;
+  }
+  .contact-send-btn {
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+    font-family: "outfit";
+    letter-spacing: 2.5px;
+    border: none;
+    border-radius: 25px;
+    width: 85vw;
+    height: 70px;
+  }
+  .contact-back-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-family: "roboto";
+    position: absolute;
+    bottom: -40px;
+    right: 8px;
+    font-size: 1.7rem;
   }
 }
 @media screen and (min-width: 350px) and (max-width: 767px) {
@@ -602,14 +720,17 @@
     bottom: 0;
     height: 60vh;
     width: 100%;
-    background: #14181b;
+    background-image: url(/image/contact.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
     z-index: 99;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   .about_section_bottom-title {
     font-size: 1.8rem;
@@ -643,7 +764,134 @@
   .contact_section {
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-image: url(/image/contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: system-ui, "-apple-system", "Segoe UI", "Open Sans",
+      "Helvetica Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 66vh;
+    width: 100%;
+    position: relative;
+  }
+  .contant_title {
+    color: black;
+    font-weight: 500;
+    font-size: 4rem;
+    font-family: "outfit";
+    letter-spacing: 2.5px;
+    margin: 20px 0 50px;
+    position: absolute;
+    top: 0;
+  }
+  .last-name,
+  .E-mail {
+    margin: 12px 0 0;
+  }
+  .Message {
+    margin: 15px 0;
+  }
+  .name-box {
+    width: 85%;
+    position: relative;
+    height: 45px;
+    overflow: hidden;
+  }
+  .textarea-box {
+    width: 85%;
+    position: relative;
+    height: 25%;
+    overflow: hidden;
+  }
+  .name-box input,
+  .textarea-box textarea {
+    width: 100%;
+    height: 100%;
+    color: black;
+    padding-top: 20px;
+    border: none;
+    background: none;
+  }
+  .name-box label,
+  .textarea-box label {
+    font-family: system-ui, "-apple-system", "Segoe UI", "Open Sans",
+      "Helvetica Neue", sans-serif;
+    position: absolute;
+    font-weight: 500;
+    font-size: 1.2rem;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #000000;
+  }
+
+  .content-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+  .content-textarea {
+    position: absolute;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+  .name-box input:focus,
+  .textarea-box textarea:focus {
+    outline: none;
+  }
+  .name-box input:focus + .label-name .content-name,
+  .name-box input:valid + .label-name .content-name {
+    transform: translateY(-70%);
+    font-size: 14px;
+    left: 0px;
+  }
+  .textarea-box textarea:focus + .label-textarea .content-textarea,
+  .textarea-box textarea:valid + .label-textarea .content-textarea {
+    transform: translateY(-10%);
+    font-size: 14px;
+    left: 0px;
+  }
+  .btn-box {
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 78px;
+    width: 90vw;
+  }
+  .contact-send-btn {
+    background-color: black;
+    color: white;
+    font-size: 1.6rem;
+    font-family: "outfit";
+    letter-spacing: 2.5px;
+    border: none;
+    border-radius: 25px;
+    width: 90vw;
+    height: 50px;
+  }
+  .contact-back-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-family: "roboto";
+    position: absolute;
+    bottom: -5px;
+    right: 8px;
   }
 }
 @media screen and (max-width: 350px) {
@@ -868,7 +1116,9 @@
     bottom: 0;
     height: 60vh;
     width: 100%;
-    background: #14181b;
+    background-image: url(/image/contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
     z-index: 99;
     display: flex;
@@ -905,5 +1155,160 @@
       0px -20px 250px rgba(239, 235, 215, 0.6),
       1px 20px 300px rgba(239, 228, 215, 0.55);
     animation: text-flicker 8s linear infinite;
+  }
+
+  .about_section_bottom {
+    position: absolute;
+    bottom: 0;
+    height: 60vh;
+    width: 100%;
+    background-image: url(/image/contact.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+  }
+  .about_section_bottom-title {
+    font-size: 1.8rem;
+    font-family: "outfit";
+    font-weight: 500;
+  }
+  .contact_section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/image/contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: system-ui, "-apple-system", "Segoe UI", "Open Sans",
+      "Helvetica Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 66vh;
+    width: 100%;
+    position: relative;
+  }
+  .contant_title {
+    color: black;
+    font-weight: 500;
+    font-size: 3.2rem;
+    font-family: "outfit";
+    letter-spacing: 2.5px;
+    margin: 20px 0 50px;
+    position: absolute;
+    top: 0;
+  }
+  .last-name,
+  .E-mail {
+    margin: 12px 0 0;
+  }
+  .Message {
+    margin: 15px 0;
+  }
+  .name-box {
+    width: 85%;
+    position: relative;
+    height: 45px;
+    overflow: hidden;
+  }
+  .textarea-box {
+    width: 85%;
+    position: relative;
+    height: 21%;
+    overflow: hidden;
+  }
+  .name-box input,
+  .textarea-box textarea {
+    width: 100%;
+    height: 100%;
+    color: black;
+    padding-top: 20px;
+    border: none;
+    background: none;
+  }
+  .name-box label,
+  .textarea-box label {
+    font-family: system-ui, "-apple-system", "Segoe UI", "Open Sans",
+      "Helvetica Neue", sans-serif;
+    position: absolute;
+    font-weight: 400;
+    font-size: 1.1rem;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #000000;
+  }
+
+  .content-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+  .content-textarea {
+    position: absolute;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+  .name-box input:focus,
+  .textarea-box textarea:focus {
+    outline: none;
+  }
+  .name-box input:focus + .label-name .content-name,
+  .name-box input:valid + .label-name .content-name {
+    transform: translateY(-70%);
+    font-size: 14px;
+    left: 0px;
+  }
+  .textarea-box textarea:focus + .label-textarea .content-textarea,
+  .textarea-box textarea:valid + .label-textarea .content-textarea {
+    transform: translateY(-10%);
+    font-size: 14px;
+    left: 0px;
+  }
+  .btn-box {
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 78px;
+    width: 88vw;
+  }
+  .contact-send-btn {
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    font-family: "outfit";
+    letter-spacing: 2.5px;
+    border: none;
+    border-radius: 25px;
+    width: 88vw;
+    height: 42px;
+  }
+  .contact-back-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-family: "roboto";
+    position: absolute;
+    bottom: -5px;
+    right: 8px;
   }
 }
