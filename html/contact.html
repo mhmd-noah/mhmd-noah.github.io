@@ -5,6 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="qr_message" id="qr_message">
+      <p class="qr_message_pragh">
+        Scan this QR to be able to use this website on your phone.
+        <input
+          type="button"
+          class="qr_message_btn"
+          id="close_qr"
+          onclick="fun_close_qr()"
+          value="x" />
+      </p>
+      <img src="/image/qr.png" alt="" title="Scan me" class="qr_code_img" />
+    </div>
+    <div class="not_found" id="not_found">
+      <div class="not_found_content">
+        <h1>Oops</h1>
+        <h2>Something Went Wrong.</h2>
+        <div class="">
+          <p class="not_found_pragh">Error 404 Page Not Found</p>
+          <input
+            type="button"
+            value=" i"
+            class="not_found_btn"
+            id="QR"
+            onclick="fun_open_qr()"
+            title="This page seems work only on phone" />
+        </div>
+      </div>
+      <img src="/image/404.png" alt="" class="not_found_bg" />
+    </div>
+    <div class="contact_section">
+      <form action="">
+        <h2>Contact</h2>
+        <!--First name -->
+        <input type="text" name="" id="" required />
+        <!--last name -->
+        <input type="text" name="" id="" required />
+        <!--E-mail-->
+        <input type="email" name="" id="" required />
+        <!--Message-->
+        <textarea name="" id="" cols="30" rows="10" required></textarea>
+        <input type="submit" value="Send" required />
+        <a href="index.html">Back</a>
+      </form>
+    </div>
+    <script src="/js/app.js"></script>
+  </body>
 </html>
