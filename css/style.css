@@ -8,7 +8,8 @@
 @media screen and (min-width: 1020px) {
   .hero_section_top,
   .hero_section_bottom,
-  .about_section {
+  .about_section,
+  .contact_section {
     display: none;
   }
   body {
@@ -638,6 +639,11 @@
       0px -20px 250px rgba(239, 235, 215, 0.6),
       1px 20px 300px rgba(239, 228, 215, 0.55);
     animation: text-flicker 8s linear infinite;
+  }
+  .contact_section {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
   }
 }
 @media screen and (max-width: 350px) {
