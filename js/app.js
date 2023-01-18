@@ -13,3 +13,4 @@ function fun_close_qr() {
     document.getElementById("not_found").style.filter = " blur(0px)";
   }
 }
+//
