@@ -421,12 +421,13 @@
     height: 25%;
     overflow: hidden;
   }
+
   .name-box input,
   .textarea-box textarea {
     width: 100%;
     height: 100%;
     color: black;
-    padding-top: 20px;
+    padding-top: 25px;
     border: none;
     background: none;
   }
@@ -817,7 +818,7 @@
     width: 100%;
     height: 100%;
     color: black;
-    padding-top: 20px;
+    padding-top: 30px;
     border: none;
     background: none;
   }
